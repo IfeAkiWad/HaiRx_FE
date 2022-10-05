@@ -16,7 +16,7 @@ export const fetchUsers = () => {
   
   export const submitUsers = (user) => {
       return (dispatch) => {
-        fetch(`http://localhost:3000/users`, {
+        fetch('http://localhost:3000/users', {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
