@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import { configureStore, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk';
 
-import allReducers from './reducers/manageDaycareAndToddlerReducers';
+import allReducers from './reducers/manageReducers';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = configureStore(allReducers, composeEnhancer(applyMiddleware(thunk)));
