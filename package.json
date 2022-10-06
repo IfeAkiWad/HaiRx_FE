@@ -2,6 +2,7 @@
   "name": "hairx_fe",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@reduxjs/toolkit": "^1.8.5",
