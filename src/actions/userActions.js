@@ -12,24 +12,24 @@ export const fetchUsers = () => {
         dispatch({ type: 'ADD_USERS', payload: users })
       })
     }
-  }
+}
   
-  export const submitUsers = (user) => {
-      return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/users', {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },  
-          body: JSON.stringify(user)
-        })
-        .then(response => response.json())
-        .then(user => {
-          // debugger
-          console.log(user, "submitting user")
-          dispatch({ type: 'ADD_USERS', payload: user })
-          
-        })
-      }  
-  }
+export const submitUsers = (user) => {
+    return (dispatch) => {
+    fetch('http://localhost:3000/api/v1/users', {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+        },  
+        body: JSON.stringify(user)
+    })
+    .then(response => response.json())
+    .then(user => {
+        // debugger
+        console.log(user, "submitting user")
+        dispatch({ type: 'ADD_USERS', payload: user })
+        
+    })
+    } 
+} 
