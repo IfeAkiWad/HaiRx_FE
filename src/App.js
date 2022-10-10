@@ -7,6 +7,11 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 
 import { useEffect } from "react";
 
+import NavBar from './components/navcomp/NavBar';
+import UserSignInContainer from './containers/UserSignInContainer';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 function App() {
   useEffect(() => {
     fetchProducts()
@@ -17,6 +22,12 @@ function App() {
   return (
     <div className="App">
       hey
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={UserSignInContainer}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
