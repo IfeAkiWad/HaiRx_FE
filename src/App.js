@@ -8,9 +8,9 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 import { useEffect } from "react";
 
 import NavBar from './components/navcomp/NavBar';
-import UserSignInContainer from './containers/UserSignInContainer';
+import productContainer from './containers/productContainer';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
@@ -21,12 +21,11 @@ function App() {
 
   return (
     <div className="App">
-      hey
       <Router>
         <NavBar />
-        <Switch>
-          <Route exact path="/" component={UserSignInContainer}/>
-        </Switch>
+        <Routes>
+          <Route exact path="/" component={productContainer}/>
+        </Routes>
       </Router>
     </div>
   );
