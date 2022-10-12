@@ -1,4 +1,4 @@
-const subscriptionReducer = (state = {subscriptions: []}, action) => {
+const subscriptionReducer = (state = {subscriptions: [], loading: false }, action) => {
     switch (action.type) {
         case 'LOADING_SUBSCRIPTIONS':
             return {
