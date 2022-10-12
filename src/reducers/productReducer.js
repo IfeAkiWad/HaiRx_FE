@@ -1,4 +1,4 @@
-const productReducer = (state = {products: []}, action) => {
+const productReducer = (state = {products: [], loading: false }, action) => {
     switch (action.type) {
         case 'LOADING_PRODUCTS':
             return {
