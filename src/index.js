@@ -5,10 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux'
+import { legacy_createStore as createStore, compose, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk';
+import allReducers from './reducers/manageReducers'
 
-import configureStore from './storeConfigure'
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(allReducers, composeEnhancer(applyMiddleware(thunk)));
 
-const store = configureStore();
+// const middlewareEnhancer = applyMiddleware(thunk)
+// const composedEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+// const store = createStore(allReducers, composedEnhancer(middlewareEnhancer));
+
+// import configureStore from './storeConfigure';
+// const store = configureStore()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

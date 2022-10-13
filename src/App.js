@@ -7,26 +7,27 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 
 import { useEffect } from "react";
 
-import NavBar from './components/navcomp/NavBar';
-import productContainer from './containers/productContainer';
+// import NavBar from './components/navcomp/NavBar';
+import ProductContainer from './containers/ProductContainer';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
   useEffect(() => {
     fetchProducts()
     fetchSubscriptions()
     fetchUsers()
   })
-
+  console.log("work dammit")
   return (
     <div className="App">
-      <Router>
+      <ProductContainer />
+      {/* <Router>
         <NavBar />
         <Routes>
-          <Route exact path="/" component={productContainer}/>
+          <Route exact path="/" component={ProductContainer}/>
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 }

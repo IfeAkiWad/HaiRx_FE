@@ -1,19 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import ProductDisplay from '../components/prodcomp/ProductDisplay'
 
 
-function productContainer ({ products }) {
-    let mapProduct = products.map(p => {
-        return p
-    })
-
-    console.log(mapProduct)
+const ProductContainer = ({ products }) => {
+    console.log(products)
 
     return (
         <div>
-            <h1>productSignInContainer</h1>
-            {mapProduct}
-            
+            Product container
+            {products.map(prod => {
+                return <ProductDisplay key={prod.id} product={prod} />
+            })}
         </div>
     )
 }
@@ -25,4 +23,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(productContainer)
+export default connect(mapStateToProps)(ProductContainer)
