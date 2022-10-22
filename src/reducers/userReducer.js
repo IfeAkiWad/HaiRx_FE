@@ -7,6 +7,7 @@ const userReducer = (state = {users: [], loading: false }, action) => {
                 loading: true
             }   
         case 'ADD_USERS':
+            console.log('ADDING USERS')
             return {
                 ...state,
                 users: action.payload,

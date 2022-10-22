@@ -3,15 +3,17 @@ import { connect } from 'react-redux'
 import ProductDisplay from '../components/prodcomp/ProductDisplay'
 
 
-const ProductContainer = ({ products }) => {
-    console.log(products)
+const ProductContainer = (props) => {
+    console.log(props.products)
+    const products = props.products
 
     return (
         <div>
             Product container
-            {products.map(prod => {
-                return <ProductDisplay key={prod.id} product={prod} />
+            {products.map((p, index) => {
+                return <ProductDisplay key={index} product={p} />
             })}
+          
         </div>
     )
 }

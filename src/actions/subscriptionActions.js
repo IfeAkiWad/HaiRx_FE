@@ -1,17 +1,21 @@
 export const fetchSubscriptions = () => {
     return (dispatch) => {
       dispatch({ type: "LOADING_SUBSCRIPTIONS" });
-      fetch("http://localhost:3000/api/v1/subscriptions")
-        .then(response => response.json())
-        .then((data) => {
-          dispatch({ type: "ADD_SUBSCRIPTIONS", subscriptions: data });
+      fetch("http://localhost:3000/subscriptions")
+        .then(response => {
+          console.log('fetching subscriptions')
+          return response.json()
+        })
+        .then((subscriptions) => {
+          dispatch({ type: "ADD_SUBSCRIPTIONS", payload: subscriptions });
+          console.log('fetched subscriptions')
         });
     };
 };  
 
 export const deleteSubscriptions = (subscriptionId) => {
   return async (dispatch) => {
-    const response = await fetch(`http://localhost:3000/api/v1/subscriptions/${subscriptionId}`, {
+    const response = await fetch(`http://localhost:3000/subscriptions/${subscriptionId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

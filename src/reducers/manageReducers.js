@@ -6,7 +6,7 @@ import { combineReducers } from "redux"
 const allReducers = combineReducers({
    subscriptionReducer,
     userReducer,
-    productReducer
+    productReducer,
 })
 
 export default allReducers

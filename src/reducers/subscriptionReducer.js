@@ -7,6 +7,7 @@ const subscriptionReducer = (state = {subscriptions: [], loading: false }, actio
                 loading: true
             }   
         case 'ADD_SUBSCRIPTIONS':
+            console.log('ADDING SUBSCRIPTIONS')
             return {
                 ...state,
                 subscriptions: action.payload,

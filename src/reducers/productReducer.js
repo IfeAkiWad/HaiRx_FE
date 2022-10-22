@@ -7,6 +7,7 @@ const productReducer = (state = {products: [], loading: false }, action) => {
                 loading: true
             }   
         case 'ADD_PRODUCTS':
+            console.log('ADDING PRODUCTS')
             return {
                 ...state,
                 products: action.payload,

@@ -1,22 +1,22 @@
 export const fetchUsers = () => {
     return (dispatch) => {
       dispatch({ type: 'LOADING_USERS'})
-      console.log('a')
-  
-      fetch('http://localhost:3000/api/v1/users')
+      fetch('http://localhost:3000/users')
       .then(response => {
+        console.log('fetching users')
         return response.json()
       })
       .then(users => {
         console.log('b')
         dispatch({ type: 'ADD_USERS', payload: users })
+        console.log('fetched users')
       })
     }
 }
   
 export const submitUsers = (user) => {
     return (dispatch) => {
-    fetch('http://localhost:3000/api/v1/users', {
+    fetch('http://localhost:3000/users', {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
