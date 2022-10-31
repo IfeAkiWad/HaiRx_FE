@@ -1,12 +1,13 @@
 import React from 'react'
 
-const ProductDisplay = (props) => {
-    const hairProd = props.product
-    console.log(hairProd)
+const ProductDisplay = ({ products }) => {
+    // const hairProd = props.product.name
+    console.log('product', products)
+    
 
   return (
     <div>
-        {/* {hairProd.name} */}
+        {products?.name}
     </div>
   )
 }
