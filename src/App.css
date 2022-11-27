@@ -2,6 +2,9 @@
   text-align: center;
 }
 
+body {
+  background-color: lightsalmon
+}
 
 /* navigation */
 nav {
@@ -10,7 +13,7 @@ nav {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   font-size: 20px;
-  background-color: orange;
+  background-color: lightsalmon;
 }
 
 nav a {
@@ -24,6 +27,15 @@ nav a {
 }
 
 nav a:hover {
-  background: white;
-  color: black;
+  background: #543855;
+  color: white;
 }
+
+/* Home */
+#home {
+  margin-top:10%;
+  color: #543855;
+}
+
+/* Products Display */
+

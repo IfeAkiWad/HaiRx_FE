@@ -8,6 +8,7 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 
 import NavBar from './components/navcomp/NavBar';
 import ProductContainer from './containers/ProductContainer';
+import Home from './components/Home';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route path="/products" element={<ProductContainer />}/>
+            <Route path="/home" element={<Home />}/>
           </Routes>
         </Router>
       </div>

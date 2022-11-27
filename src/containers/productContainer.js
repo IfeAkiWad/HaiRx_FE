@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ProductDisplay from '../components/prodcomp/ProductDisplay'
+import ProductsDisplay from '../components/prodcomp/ProductsDisplay'
 
 
 class ProductContainer extends Component {
@@ -12,7 +12,7 @@ class ProductContainer extends Component {
                 <div>
                     Product container
                     {this.props.products.map( (p, index) => {
-                        return <ProductDisplay key={index} products={p} />
+                        return <ProductsDisplay key={index} products={p} />
                     })}
                 
                 </div>
