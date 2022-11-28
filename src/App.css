@@ -38,12 +38,31 @@ nav a:hover {
 }
 
 #sign-in {
-  background-color: #543855;
+  background-color: lightsalmon;
+  border-radius: 50%;
+  margin-top: 5%;
 }
 
 #sign-up {
   background-color: #543855;
 }
 
+label {
+  color: white;
+  text-shadow: 1px 1px 2px black
+}
+
+button, #button {
+  background-color: #543855 ;
+    color: azure;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#label-margin {
+  margin-top: 50%;
+}
 /* Products Display */
 

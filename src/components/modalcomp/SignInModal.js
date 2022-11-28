@@ -9,14 +9,15 @@ const SignInModal = ({ handleClose, show, children }) => {
         <div className={showHideClassName}>
       
             Hello Modal
-            <section className="modal-main">
+            <div className="modal-main">
                 {/* {children} */}
                
                 <SignIn />
+                <br />
                 <button type="button" onClick={handleClose}>
-                Close
+                Cancel
                 </button>
-            </section>
+            </div>
         </div>
     )
 }
