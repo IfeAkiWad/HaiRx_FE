@@ -31,10 +31,18 @@ nav a:hover {
   color: white;
 }
 
-/* Home */
+/* Home/Landing page */
 #home {
   margin-top:10%;
   color: #543855;
+}
+
+#sign-in {
+  background-color: #543855;
+}
+
+#sign-up {
+  background-color: #543855;
 }
 
 /* Products Display */
