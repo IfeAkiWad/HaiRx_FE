@@ -10,9 +10,13 @@ const SignInModal = ({ handleClose, show}) => {
             <div className="modal-main">
                 <SignIn />
                 <br />
-                <button type="button" onClick={handleClose}>
-                Cancel
-                </button>
+                <ul>
+                    <li>
+                        <button type="button" onClick={handleClose}>
+                            Cancel
+                        </button>
+                    </li>
+                </ul>
             </div>
         </div>
     )

@@ -26,19 +26,33 @@ const SignUp = () => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-            <input type='text' onChange={handleName} value={name} placeholder='Name' />&nbsp;
-            <br /><br />
-            <input type='text' onChange={handleEmail} value={email} placeholder='Email'/>&nbsp;
-            <br /><br />
-            <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
-            <br /><br />
-            <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
-            <br /><br /><br />
-            <input id='button' type='submit' value='Create Account'/>
-            </form>
-        </div>
+       <div className='forms'>
+             <div>
+                <form onSubmit={handleSubmit}>
+                    <ul>
+                        <li>
+                            <input type='text' onChange={handleName} value={name} placeholder='Name' />&nbsp;
+                        </li>
+                        <br /><br />
+                        <li>
+                            <input type='text' onChange={handleEmail} value={email} placeholder='Email'/>&nbsp;
+                        </li>
+                        <br /><br />
+                        <li>
+                            <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
+                        </li>
+                        <br /><br />
+                        <li>
+                            <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
+                        </li>
+                        <br /><br /><br />
+                        <li>
+                            <input id='button' type='submit' value='Create Account'/>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+       </div>
     )
 }
 
