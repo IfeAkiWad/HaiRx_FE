@@ -30,7 +30,7 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route path="/products" element={<ProductContainer />}/>
-            <Route path="/home" element={<Home />}/>
+            <Route path="/hairx" element={<Home />}/>
           </Routes>
         </Router>
       </div>

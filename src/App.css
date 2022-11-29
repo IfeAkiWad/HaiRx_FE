@@ -7,6 +7,11 @@ body {
 }
 
 /* navigation */
+.nav-container {
+  display: flex;
+  flex-direction: row;
+}
+
 nav {
   overflow: hidden;
   position: fixed; /* Set the navbar to fixed position */
@@ -32,6 +37,15 @@ nav a:hover {
 }
 
 /* Home/Landing page */
+.home-container {
+  display:flex;
+  justify-content: center;
+  /* align-items: flex-start; */
+  height: 500px;
+  align-items: center;
+  align-content: center;
+}
+
 #home {
   margin-top:10%;
   color: #543855;
@@ -45,6 +59,10 @@ h1 {
 h4 {
   font-weight: bold;
   font-size: 150%;
+}
+
+.login {
+  justify-content: space-evenly;
 }
 
 .forms {
