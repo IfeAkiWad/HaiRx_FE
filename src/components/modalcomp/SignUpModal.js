@@ -1,14 +1,14 @@
 import React from "react";
 import './modal.css';
-import SignIn from '../authcomp/SignIn'
+import SignUp from "../authcomp/SignUp";
 
-const SignInModal = ({ handleClose, show}) => {
+const SignUpModal = ({ handleClose, show}) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";
+    // if(!show) return null
     return (
         <div className={showHideClassName}>
-      
             <div className="modal-main">
-                <SignIn />
+                <SignUp />
                 <br />
                 <button type="button" onClick={handleClose}>
                 Cancel
@@ -18,4 +18,4 @@ const SignInModal = ({ handleClose, show}) => {
     )
 }
 
-export default SignInModal
+export default SignUpModal

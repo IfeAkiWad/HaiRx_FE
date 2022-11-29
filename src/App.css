@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: lightsalmon
+  background-color: azure
 }
 
 /* navigation */
@@ -13,17 +13,17 @@ nav {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   font-size: 20px;
-  background-color: lightsalmon;
+  background-color: azure;
 }
 
 nav a {
   float: left;
   display: block;
-  color: white;
+  color: #543855;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 nav a:hover {
@@ -37,22 +37,41 @@ nav a:hover {
   color: #543855;
 }
 
-#sign-in {
+h1 {
+  font-weight: bold;
+  font-size: 400%;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+form {
   background-color: lightsalmon;
   border-radius: 50%;
   margin-top: 5%;
 }
 
-#sign-up {
-  background-color: #543855;
-}
+/* #sign-in {
+  
+} */
 
 label {
-  color: white;
-  text-shadow: 1px 1px 2px black
+  color: azure;
+  text-shadow: 2px 2px 4px grey
 }
 
 button, #button {
+  background-color: lightsalmon ;
+    color: #543855;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#button {
   background-color: #543855 ;
     color: azure;
     font-size: 14px;
@@ -61,6 +80,9 @@ button, #button {
     cursor: pointer;
 }
 
+input {
+  background-color: azure;
+}
 #label-margin {
   margin-top: 50%;
 }

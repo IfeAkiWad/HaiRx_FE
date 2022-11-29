@@ -1,24 +1,33 @@
 import React, { useState } from 'react'
 import SignInModal from './SignInModal';
-// import SignIn from '../authcomp/SignIn'
-
-// import SignUp from '../authcomp/SignUp'
+import SignUpModal from './SignUpModal';
 
 const Dashboard = () => {
-    const [show, setShow] = useState(false)
+    const [signIn, setSignIn] = useState(false)
+    const [signUp, setSignUp] = useState(false)
     
-    const showModal = (e) => {
-      setShow(true)
+    const signInModal = (e) => {
+      setSignIn(true)
+    }
+
+    const signUpModal = (e) => {
+      setSignUp(true)
     };
 
-    const hideModal = (e) => {
-      setShow(false)
+    const hideSignInModal = (e) => {
+      setSignIn(false)
+    };
+    
+    const hideSignUpModal = (e) => {
+      setSignUp(false)
     };
 
   return (
     <div>
-      <SignInModal handleClose={hideModal} show={show} />
-      <button  onClick={showModal}> Sign In</button>
+      <SignUpModal handleClose={hideSignUpModal} show={signUp} />
+      <SignInModal handleClose={hideSignInModal} show={signIn} />
+      <button  onClick={signInModal}> Sign In</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button  onClick={signUpModal}> Create Account</button>
     </div>
   )
 }

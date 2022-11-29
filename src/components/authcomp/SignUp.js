@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 
-const SignIn = () => {
+const SignUp = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
 
     const handleUsername = (event) => {
         setUsername(event.target.value)
@@ -11,21 +13,33 @@ const SignIn = () => {
         setPassword(event.target.value)
     }
 
+    const handleName = (event) => {
+        setName(event.target.value)
+    }
+    
+    const handleEmail = (event) => {
+        setEmail(event.target.value)
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
     }
 
     return (
         <div>
-            <form id="sign-in" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
+            <input type='text' onChange={handleName} value={name} placeholder='Name' />&nbsp;
+            <br /><br />
+            <input type='text' onChange={handleEmail} value={email} placeholder='Email'/>&nbsp;
+            <br /><br />
             <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
             <br /><br />
             <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
-                <br /><br /><br />
-                <input id='button' type='submit' value='Sign In'/>
+            <br /><br /><br />
+            <input id='button' type='submit' value='Create Account'/>
             </form>
         </div>
     )
 }
 
-export default SignIn
+export default SignUp
