@@ -54,9 +54,13 @@ nav a:hover {
   color: #543855;
 }
 
-span {
+#logo {
   font-weight: bold;
-  font-size: 50px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+span {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
@@ -69,11 +73,6 @@ h2 {
   font-size: 150%;
 }
 
-
-.login {
-  /* justify-content: space-evenly; */
-}
-
 .forms {
   display: flex; 
   justify-content: space-evenly;
@@ -83,18 +82,8 @@ h2 {
 
 form {
   background-color: lightsalmon;
-  /* border-radius: 50%; */
   margin-top: 5%;
 }
-
-/* li {
-  list-style-type: none;
-} */
-
-/* #sign-in {
-  
-} */
-
 
 button, #button {
   background-color: lightsalmon ;
@@ -107,7 +96,6 @@ button, #button {
 }
 
 button:hover {
-  /* background-color: white;  */
   color: white;
 }
 

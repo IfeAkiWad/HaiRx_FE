@@ -5,10 +5,8 @@ const NavBar = () => {
     return (
         <div className='nav-container'>
             <nav id="nav">
-                <div>
-                    <span>
-                        <Link id="link" to="/hairx">HaiRx</Link>
-                    </span>   
+                <div id='logo'> 
+                        <Link id="link" to="/hairx">HaiRx</Link> 
                 </div> 
                 <div>
                     <Link id="link" to="/products">Products</Link> 
