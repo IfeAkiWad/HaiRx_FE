@@ -99,19 +99,37 @@ form {
 button, #button {
   background-color: lightsalmon ;
     color: #543855;
-    font-size: 14px;
+    font-size: 19px;
     padding: 5px 10px;
     border-radius: 4px;
+    transition-duration: 0.4s;
     cursor: pointer;
+}
+
+button:hover {
+  /* background-color: white;  */
+  color: white;
+}
+
+#button:hover {
+  background-color: lightsalmon; 
+  color: white;
 }
 
 #button {
   background-color: #543855 ;
     color: azure;
-    font-size: 14px;
+    font-size: 19px;
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
 input {

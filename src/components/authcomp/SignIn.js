@@ -19,9 +19,9 @@ const SignIn = () => {
         <div className='forms'>
             <div>
                 <form id="sign-in" onSubmit={handleSubmit}>    
-                    <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
+                    <input className='input-field' type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
                     <br /><br />
-                    <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
+                    <input className='input-field' type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
                     <br /><br /><br />
                     <input id='button' type='submit' value='Sign In'/>
 

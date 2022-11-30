@@ -29,13 +29,13 @@ const SignUp = () => {
        <div className='forms'>
              <div>
                 <form onSubmit={handleSubmit}>
-                        <input type='text' onChange={handleName} value={name} placeholder='Name' />&nbsp;
+                        <input className='input-field' type='text' onChange={handleName} value={name} placeholder='Name' />&nbsp;
                         <br /><br />
-                        <input type='text' onChange={handleEmail} value={email} placeholder='Email'/>&nbsp;
+                        <input className='input-field' type='text' onChange={handleEmail} value={email} placeholder='Email'/>&nbsp;
                         <br /><br />
-                        <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
+                        <input className='input-field' type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
                         <br /><br />
-                        <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
+                        <input className='input-field' type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
                         <br /><br /><br />
                         <input id='button' type='submit' value='Create Account'/>
                 </form>

@@ -13,12 +13,13 @@
     position:absolute;
     background: lightsalmon;
     width: 25%;
-    height: 40%;
+    height: 50%;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
     /* border-radius: 1.5%; */
-    margin-bottom: 5%;
+    /* margin-bottom: 0%; */
+    margin-top: 3%;
     
   }
 
@@ -26,13 +27,13 @@
     /* position:fixed;
     background: lightsalmon; */
     /* width: 25%; */
-    height: 29%;
+    height: 35%;
     /* top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    border-radius: 1.5%;
-    margin-bottom: 5%;
-     */
+    border-radius: 1.5%;*/
+    margin-top: -1%; 
+     
   }
   
   .display-block {
