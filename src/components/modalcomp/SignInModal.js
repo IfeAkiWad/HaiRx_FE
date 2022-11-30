@@ -7,16 +7,12 @@ const SignInModal = ({ handleClose, show}) => {
     return (
         <div className={showHideClassName}>
       
-            <div className="modal-main">
+            <div id='signin-modal' className="modal-main">
                 <SignIn />
                 <br />
-                <ul>
-                    <li>
-                        <button type="button" onClick={handleClose}>
-                            Cancel
-                        </button>
-                    </li>
-                </ul>
+                <button type="button" onClick={handleClose}>
+                    Cancel
+                </button>
             </div>
         </div>
     )

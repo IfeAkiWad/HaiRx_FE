@@ -10,6 +10,8 @@ body {
 .nav-container {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  margin-left: 3%;
 }
 
 nav {
@@ -17,13 +19,13 @@ nav {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  font-size: 20px;
+  /* font-size: 20px; */
   background-color: azure;
 }
 
 nav a {
   float: left;
-  display: block;
+  display:block;
   color: #543855;
   text-align: center;
   padding: 14px 16px;
@@ -44,6 +46,7 @@ nav a:hover {
   height: 500px;
   align-items: center;
   align-content: center;
+  margin-top: -5%;
 }
 
 #home {
@@ -51,24 +54,31 @@ nav a:hover {
   color: #543855;
 }
 
+span {
+  font-weight: bold;
+  font-size: 50px;
+}
+
 h1 {
   font-weight: bold;
   font-size: 400%;
 }
 
-h4 {
+h2 {
   font-weight: bold;
   font-size: 150%;
 }
 
+
 .login {
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
 }
 
 .forms {
-  display: flex;
+  display: flex; 
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 5%;
 }
 
 form {
@@ -77,18 +87,14 @@ form {
   margin-top: 5%;
 }
 
-li {
+/* li {
   list-style-type: none;
-}
+} */
 
 /* #sign-in {
   
 } */
 
-label {
-  color: azure;
-  text-shadow: 2px 2px 4px grey
-}
 
 button, #button {
   background-color: lightsalmon ;

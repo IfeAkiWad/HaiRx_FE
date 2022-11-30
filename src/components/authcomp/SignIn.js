@@ -18,20 +18,13 @@ const SignIn = () => {
     return (
         <div className='forms'>
             <div>
-                <form id="sign-in" onSubmit={handleSubmit}>
-                    <ul>
-                        <li>    
-                            <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
-                        </li>
-                        <br /><br />
-                        <li>
-                            <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
-                        </li>
-                        <br /><br /><br />
-                        <li>
-                            <input id='button' type='submit' value='Sign In'/>
-                        </li>
-                    </ul>
+                <form id="sign-in" onSubmit={handleSubmit}>    
+                    <input type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
+                    <br /><br />
+                    <input type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
+                    <br /><br /><br />
+                    <input id='button' type='submit' value='Sign In'/>
+
                 </form>
             </div>
         </div>

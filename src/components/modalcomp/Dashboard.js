@@ -23,7 +23,7 @@ const Dashboard = () => {
     };
 
   return (
-    <div className='auth'>
+    <div className='auth-container'>
       <SignUpModal handleClose={hideSignUpModal} show={signUp} />
       <SignInModal handleClose={hideSignInModal} show={signIn} />
       <button  onClick={signInModal}> Sign In</button>&nbsp;&nbsp;&nbsp;&nbsp;
