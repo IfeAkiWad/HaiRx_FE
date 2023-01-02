@@ -8,7 +8,7 @@ const ProductsDisplay = ({ products }) => {
 
   return (
     <div id="products-display">
-        <button><Link to="">{products?.name}</Link></button><br /><br />
+        <button><Link to={`/products/product/${products?.id}=${products?.name}`}>{products?.name}</Link></button><br /><br />
     </div>
   )
 }
