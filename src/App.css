@@ -42,11 +42,10 @@ nav a:hover {
 .home-container {
   display:flex;
   justify-content: center;
-  /* align-items: flex-start; */
-  height: 500px;
+  height: auto;
+  max-width: 100%;
   align-items: center;
   align-content: center;
-  margin-top: -5%;
 }
 
 #home {
@@ -123,8 +122,42 @@ button:hover {
 input {
   background-color: azure;
 }
-#label-margin {
-  margin-top: 50%;
+
+#img{
+display:flex ;
+}
+
+.background-img {
+  /* margin-left: 7%;  
+  margin-top: 5%;  */
+  margin:auto;
+  background-image: url("/src/hairx model images/background.jpg");
+  /* height: 80%;
+  background-position: center;
+  background-repeat:repeat;
+  background-size: cover;
+  position: relative;
+  background-color: lightgreen; */
+}
+
+#lede-img {
+  /* display: flex;
+  align-items: center;  
+  margin-top: 5%;
+  margin-left: 10%;
+  height: 600px;
+  max-width: 100%; */
+  background-image: url("/src/hairx model images/lede.webp");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 821px) {
+  #lede-img {   
+    flex-direction: column;
+  }
 }
 /* Products Display */
 
