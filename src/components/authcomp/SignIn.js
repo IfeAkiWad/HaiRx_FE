@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { connect } from "react-redux"
+import { loginUsers } from "../../actions/userActions"
 
 const SignIn = () => {
     const [username, setUsername] = useState('')
@@ -13,6 +15,8 @@ const SignIn = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        loginUsers(username, password)
+        alert("Successfully signed in")
     }
 
     return (
@@ -31,4 +35,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default connect(null, { loginUsers })(SignIn)
