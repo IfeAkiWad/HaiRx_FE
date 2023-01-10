@@ -7,13 +7,16 @@ const SignIn = () => {
     const [password, setPassword] = useState('')
 
     const handleUsername = (event) => {
+        console.log('filling out username')
         setUsername(event.target.value)
     }
     const handlePassword = (event) => {
+        console.log('filling out password')
         setPassword(event.target.value)
     }
 
     const handleSubmit = (event) => {
+        console.log('form submit')
         event.preventDefault()
         loginUsers(username, password)
         alert("Successfully signed in")
