@@ -132,12 +132,34 @@ display:flex ;
   margin-top: 5%;  */
   margin:auto;
   background-image: url("/src/hairx model images/background.jpg");
+  /* margin-left: 7%;   */
+  margin-top: 10%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+  background-color: lightgreen;
   /* height: 80%;
   background-position: center;
   background-repeat:repeat;
   background-size: cover;
   position: relative;
   background-color: lightgreen; */
+}
+
+#user-landing-text{
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  opacity: 0.8;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: azure;
+  border: 0.5px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }
 
 #lede-img {
