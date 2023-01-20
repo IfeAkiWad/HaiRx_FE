@@ -23,8 +23,7 @@ class SignIn extends Component {
         event.preventDefault();
         this.props.loginUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
         // alert("Successfully signed in");
-        // this.props.history.push('/toddlers'); //redirecting to toddlers index
-
+        // window.location.assign("https://www.w3schools.com")
     }
 
     render () {
