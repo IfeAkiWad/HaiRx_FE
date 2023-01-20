@@ -9,6 +9,7 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 import NavBar from './components/navcomp/NavBar';
 import ProductContainer from './containers/ProductContainer';
 import Home from './components/Home';
+import UserLanding from './components/usercomp/UserLanding';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
           <Routes>
             <Route exact path="/products" element={<ProductContainer />}/>
             <Route exact path="/" element={<Home />}/>
+            <Route exact path="/your-hairx" element={<UserLanding />}/>
           </Routes>
         </Router>
       </div>

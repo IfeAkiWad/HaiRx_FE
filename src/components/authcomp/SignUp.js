@@ -23,7 +23,7 @@ class SignUp extends Component {
         event.preventDefault();
         this.props.submitUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
         // alert("Successfully signed in");
-        // window.location.assign("https://www.w3schools.com")
+        // window.location.assign("https://localhost:3001/your-hairx")
     }
 
     render () {

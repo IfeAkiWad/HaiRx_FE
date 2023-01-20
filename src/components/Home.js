@@ -1,7 +1,7 @@
 import React from 'react'
 import Dashboard from './modalcomp/Dashboard'
 // import lede from '../hairx model images/lede.webp'
-import background from '../hairx model images/background.jpg'
+
 
 const Home = () => {
   return (
@@ -16,9 +16,7 @@ const Home = () => {
           <img  src={lede} alt="img..." />
        </div> */}
 
-       <div id='img'>
-          {/* <img  className='background-img' src={background} alt="img..." /> */}
-       </div>
+       
     </div>
     
   )
