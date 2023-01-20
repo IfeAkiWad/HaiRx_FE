@@ -14,7 +14,7 @@ class SignIn extends Component {
     }
 
     handleChange = (event) => {
-        console.log('typing in form')
+        console.log('typing in sign in form')
         this.setState({[event.target.name]: event.target.value})
     }
 

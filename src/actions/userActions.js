@@ -34,6 +34,7 @@ export const submitUsers = (user) => {
             localStorage.setItem('user', user.jwt);
             console.log(user, "submitting user")
             dispatch({ type: 'ADD_USERS', payload: user })
+            window.location.href="home.html"
           }  
       })
       .catch((err) => {
@@ -61,8 +62,10 @@ export const loginUsers = (user) => {
         } else {
           localStorage.setItem('user', user.jwt);
           console.log(user, "submitting user")
+          dispatch({ type: 'ADD_USERS', payload: user })
+          window.location.href="home.html"
         }
-        dispatch({ type: 'ADD_USERS', payload: user })
+       
         console.log(user);
     })
     .catch((err) => {
