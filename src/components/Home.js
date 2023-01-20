@@ -17,7 +17,7 @@ const Home = () => {
        </div> */}
 
        <div id='img'>
-          <img  className='background-img' src={background} alt="img..." />
+          {/* <img  className='background-img' src={background} alt="img..." /> */}
        </div>
     </div>
     

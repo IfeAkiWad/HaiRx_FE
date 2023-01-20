@@ -1,6 +1,6 @@
 import React from "react";
 import './modal.css';
-import SignUp from "../authcomp/SignUp";
+import SignUp from '../authcomp/SignUp'
 
 const SignUpModal = ({ handleClose, show}) => {
     const showHideClassName = show ? "modal display-block" : "modal display-none";

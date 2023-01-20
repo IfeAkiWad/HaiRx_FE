@@ -1,41 +1,48 @@
-import React, {useState} from 'react'
+import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { loginUsers } from "../../actions/userActions"
 
-const SignIn = () => {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+class SignIn extends Component {
 
-    const handleUsername = (event) => {
-        console.log('filling out username')
-        setUsername(event.target.value)
-    }
-    const handlePassword = (event) => {
-        console.log('filling out password')
-        setPassword(event.target.value)
+    constructor() {
+        super() //helps constructor execure what itinherited from React.component
+        this.state = {
+           email: '',
+           password: ''
+        }
+
     }
 
-    const handleSubmit = (event) => {
+    handleChange = (event) => {
+        console.log('typing in form')
+        this.setState({[event.target.name]: event.target.value})
+    }
+
+    handleSubmit = (event) => {
         console.log('form submit')
-        event.preventDefault()
-        loginUsers(username, password)
-        alert("Successfully signed in")
+        event.preventDefault();
+        this.props.loginUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
+        // alert("Successfully signed in");
+        // this.props.history.push('/toddlers'); //redirecting to toddlers index
+
     }
 
-    return (
-        <div className='forms'>
-            <div>
-                <form id="sign-in" onSubmit={handleSubmit}>    
-                    <input className='input-field' type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
-                    <br /><br />
-                    <input className='input-field' type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
-                    <br /><br /><br />
-                    <input id='button' type='submit' value='Sign In'/>
-
-                </form>
+    render () {
+        return (
+            <div className='forms'>
+                <div>
+                    <form id="sign-in" onSubmit={this.handleSubmit}>    
+                        <input className='input-field' name='email' type='text' onChange={this.handleChange} value={this.state.email} placeholder='Email'/>&nbsp;
+                        <br /><br />
+                        <input className='input-field' name='password' type='text' onChange={this.handleChange} value={this.state.password} placeholder='Password'/>&nbsp;
+                        <br /><br /><br />
+                        <input id='button' type='submit' value='Sign In'/>
+    
+                    </form>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default connect(null, { loginUsers })(SignIn)

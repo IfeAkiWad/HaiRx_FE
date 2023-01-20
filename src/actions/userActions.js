@@ -19,9 +19,9 @@ export const submitUsers = (user) => {
       fetch('http://localhost:3000/api/v1/users', {
           method: "POST",
           headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-          // Authorization: `Bearer ${localStorage.getItem('user')}`
+          "Content-Type":"application/json",
+          // "Accept": "application/json"
+          Authorization:`Bearer ${localStorage.getItem('user')}`
           },  
           body: JSON.stringify(user)
       })
@@ -29,7 +29,7 @@ export const submitUsers = (user) => {
       .then(user => {
           // debugger
           if (user.error) {
-            alert("Username or email taken"); /*displays error message*/
+            alert("Email taken"); /*displays error message*/
           } else {
             localStorage.setItem('user', user.jwt);
             console.log(user, "submitting user")
@@ -48,21 +48,22 @@ export const loginUsers = (user) => {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
-        // "Accept": "application/json"
-        Authorization: `Bearer ${localStorage.getItem('user')}`
+        "Accept": "application/json"
+        // Authorization: `Bearer ${localStorage.getItem('user')}`
         },  
         body: JSON.stringify(user)
     })
     .then(response => response.json())
     .then(user => {
-        // debugger
+        console.log(user);        
         if (user.error) {
-          alert("Username or email invalid"); /*displays error message*/
+          alert("Email or password invalid"); /*displays error message*/
         } else {
           localStorage.setItem('user', user.jwt);
           console.log(user, "submitting user")
-          dispatch({ type: 'ADD_USERS', payload: user })
-        }  
+        }
+        dispatch({ type: 'ADD_USERS', payload: user })
+        console.log(user);
     })
     .catch((err) => {
       console.log(err);

@@ -1,47 +1,48 @@
-import React, {useState} from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { submitUsers } from '../../actions/userActions'
 
-const SignUp = () => {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
+class SignUp extends Component {
 
-    const handleUsername = (event) => {
-        setUsername(event.target.value)
-    }
-    const handlePassword = (event) => {
-        setPassword(event.target.value)
-    }
+    constructor() {
+        super() //helps constructor execure what itinherited from React.component
+        this.state = {
+           email: '',
+           password: ''
+        }
 
-    const handleName = (event) => {
-        setName(event.target.value)
-    }
-    
-    const handleEmail = (event) => {
-        setEmail(event.target.value)
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
+    handleChange = (event) => {
+        console.log('typing in form')
+        this.setState({[event.target.name]: event.target.value})
     }
 
-    return (
-       <div className='forms'>
-             <div>
-                <form onSubmit={handleSubmit}>
-                        <input className='input-field' type='text' onChange={handleName} value={name} placeholder='Name' />&nbsp;
+    handleSubmit = (event) => {
+        console.log('form submit')
+        event.preventDefault();
+        this.props.submitUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
+        // alert("Successfully signed in");
+        // this.props.history.push('/toddlers'); //redirecting to toddlers index
+
+    }
+
+    render () {
+        return (
+            <div className='forms'>
+                <div>
+                    <form id="sign-up" onSubmit={this.handleSubmit}>    
+                        <input className='input-field' name='email' type='text' onChange={this.handleChange} value={this.state.email} placeholder='Email'/>&nbsp;
                         <br /><br />
-                        <input className='input-field' type='text' onChange={handleEmail} value={email} placeholder='Email'/>&nbsp;
-                        <br /><br />
-                        <input className='input-field' type='text' onChange={handleUsername} value={username} placeholder='Username'/>&nbsp;
-                        <br /><br />
-                        <input className='input-field' type='text' onChange={handlePassword} value={password} placeholder='Password'/>&nbsp;
+                        <input className='input-field' name='password' type='text' onChange={this.handleChange} value={this.state.password} placeholder='Password'/>&nbsp;
                         <br /><br /><br />
-                        <input id='button' type='submit' value='Create Account'/>
-                </form>
+                        <input id='button' type='submit' value='Sign Up'/>
+    
+                    </form>
+                </div>
             </div>
-       </div>
-    )
+        )
+    }
 }
 
-export default SignUp
+export default connect(null, { submitUsers })(SignUp)

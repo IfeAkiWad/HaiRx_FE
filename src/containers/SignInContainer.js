@@ -4,9 +4,15 @@ import SignIn from '../components/authcomp/SignIn'
 
 export class SignInContainer extends Component {
   render() {
+    console.log('returnUsers', this.props.returnUsers)
+    const users = this.props.returnUsers
+    const user = users.map(u => {
+            return u.email
+        })
+    
     return (
       <div>
-            <SignIn />
+            <SignIn  user={user} />
       </div>
     )
   }
