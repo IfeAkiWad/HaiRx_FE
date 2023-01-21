@@ -1,5 +1,6 @@
 import React from 'react'
 import background from '../../hairx model images/background.jpg'
+import { Link } from 'react-router-dom'
 const UserLanding = () => {
 
   return (
@@ -8,7 +9,7 @@ const UserLanding = () => {
           <img  className='background-img' src={background} alt="img..." />
        </div>
        <h1 id='user-landing-text'>
-        Healthy Hair starts <a id="product-link" href="http://localhost:3001/products">HERE</a>
+        Healthy Hair starts <Link id="product-link" to="/products">HERE</Link>
        </h1>
        
     </div>
