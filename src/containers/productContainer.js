@@ -1,20 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ProductsDisplay from '../components/prodcomp/ProductsDisplay'
+import ProductFilterContainer from '../containers/ProductFilterContainer'
 
 
 class ProductContainer extends Component {
    
     render () { 
-        console.log('Products Container', this.props.products) 
+        // console.log('Products Container', this.props.products) 
          
         return (
                 <div>
-                    Product container
-                    {this.props.products.map( (p, index) => {
-                        return <ProductsDisplay key={index} products={p} />
-                    })}
-                
+                    <ProductFilterContainer products={this.props.products} />
                 </div>
         )
     }           

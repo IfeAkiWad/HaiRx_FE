@@ -8,9 +8,11 @@ const UserLanding = () => {
         <div id='img'>
           <img  className='background-img' src={background} alt="img..." />
        </div>
-       <h1 id='user-landing-text'>
-        Healthy Hair starts <Link id="product-link" to="/products">HERE</Link>
-       </h1>
+       <Link id="product-link" to="/products">
+          <h1 id='user-landing-text'>
+          Healthy Hair starts HERE
+          </h1>
+        </Link>
        
     </div>
   )
