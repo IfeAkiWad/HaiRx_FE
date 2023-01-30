@@ -7,7 +7,7 @@ const SignUpModal = ({ handleClose, show}) => {
     // if(!show) return null
     return (
         <div className={showHideClassName}>
-            <div className="modal-main">
+            <div id='signup-modal' className="modal-main">
                 <SignUp />
                 <br />
                 <button type="button" onClick={handleClose}>

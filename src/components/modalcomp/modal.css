@@ -23,7 +23,7 @@
     
   }
 
-  #signin-modal {
+  #signin-modal, #signup-modal {
 
     height: 35%;
     margin-top: -1%; 
