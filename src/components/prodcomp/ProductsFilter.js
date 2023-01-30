@@ -8,6 +8,7 @@ const ProductsFilter = () => {
 
   return (
     <div id="products-display">
+      display filtered products here
         {/* <button><Link to={`/products/${products?.id}=${products?.name}`}>{products?.name}</Link></button><br /><br /> */}
     </div>
   )

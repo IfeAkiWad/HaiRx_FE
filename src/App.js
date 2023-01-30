@@ -8,6 +8,7 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 
 import NavBar from './components/navcomp/NavBar';
 import ProductContainer from './containers/ProductContainer';
+// import ProductFilterContainer from './containers/ProductFilterContainer';
 import Home from './components/Home';
 import UserLanding from './components/usercomp/UserLanding';
 

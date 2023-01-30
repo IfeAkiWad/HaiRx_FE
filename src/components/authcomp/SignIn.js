@@ -5,7 +5,7 @@ import { loginUsers } from "../../actions/userActions"
 class SignIn extends Component {
 
     constructor() {
-        super() //helps constructor execure what itinherited from React.component
+        super() //helps constructor execute what itinherited from React.component
         this.state = {
            email: '',
            password: ''

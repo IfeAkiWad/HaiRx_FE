@@ -5,7 +5,7 @@
     left: 0;
     width:100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
   }
   
   .modal-main {
@@ -36,4 +36,20 @@
   
   .display-none {
     display: none;
+  }
+
+  #brand-filter-modal, #name-filter-modal, #type-filter-modal {
+    height: 75%;
+    width: 50%;
+    margin-top: -1%; 
+  }
+
+  .brand-filter-modal, .name-filter-modal, .type-filter-modal {
+    /* position: fixed; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
   }

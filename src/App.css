@@ -79,7 +79,7 @@ h2 {
   margin-top: 5%;
 }
 
-form {
+#sign-in {
   background-color: lightsalmon;
   margin-top: 5%;
 }
@@ -218,4 +218,28 @@ a:active {
   }
 }
 /* Products Display */
+
+#prod-container-div {
+  margin-top: 10%;
+}
+
+#prod-filter-div {
+  margin-top: 5%;
+}
+
+p, #prod-container-h2 {
+  color: #543855;
+}
+
+/* product filters */
+
+#brand-filter-modal, #name-filter-modal, #type-filter-modal {
+  background-color: azure ;
+    color: #543855;
+    font-size: 19px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 

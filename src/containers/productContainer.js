@@ -9,7 +9,8 @@ class ProductContainer extends Component {
         // console.log('Products Container', this.props.products) 
          
         return (
-                <div>
+                <div id="prod-container-div">
+                    <h2 id="prod-container-h2">What are you looking for?</h2>
                     <ProductFilterContainer products={this.props.products} />
                 </div>
         )
