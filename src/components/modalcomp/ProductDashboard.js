@@ -3,7 +3,7 @@ import BrandFilterModal from '../modalcomp/BrandFilterModal'
 import NameFilterModal from '../modalcomp/NameFilterModal'
 import TypeFilterModal from '../modalcomp/TypeFilterModal'
 
-const Dashboard = () => {
+const Dashboard = ({ filterProducts }) => {
     const [brand, setBrand] = useState(false)
     const [name, setName] = useState(false)
     const [type, setType] = useState(false)
@@ -37,9 +37,9 @@ const Dashboard = () => {
       <button id='button' onClick={brandFilterModal}>Brand</button>&nbsp;
       <button id='button' onClick={nameFilterModal}>Product Name</button>&nbsp;
       <button id='button' onClick={typeFilterModal}>Product Type</button>
-      <BrandFilterModal handleClose={hideBrandFilterModal} show={brand} />
-      <NameFilterModal handleClose={hideNameFilterModal} show={name} />
-      <TypeFilterModal handleClose={hideTypeFilterModal} show={type} />
+      <BrandFilterModal filterProducts={filterProducts} handleClose={hideBrandFilterModal} show={brand} />
+      <NameFilterModal filterProducts={filterProducts} handleClose={hideNameFilterModal} show={name} />
+      <TypeFilterModal filterProducts={filterProducts} handleClose={hideTypeFilterModal} show={type} />
       {/* <button  onClick={signInModal}> Sign In</button>&nbsp;&nbsp;&nbsp;&nbsp;
       <button  onClick={signUpModal}> Create Account</button> */}
     </div>

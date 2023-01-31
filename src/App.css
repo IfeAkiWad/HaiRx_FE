@@ -243,3 +243,6 @@ p, #prod-container-h2 {
     cursor: pointer;
 }
 
+ul, li {
+  list-style-type: none;
+}
