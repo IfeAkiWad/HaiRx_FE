@@ -53,7 +53,7 @@ const ProductFilterContainer = ({ products }) => {
 
   return (
     <div>
-        <p>Search by brand, product name, or product type</p>
+        <h2 id='prodfilter-container-h2'>Search by brand, product name, or product type</h2>
         {/* <button id='button'>Brand</button>&nbsp;
         <button id='button'>Product Name</button>&nbsp;
         <button id='button'>Product Type</button> */}
