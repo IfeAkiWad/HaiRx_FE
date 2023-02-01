@@ -245,4 +245,14 @@ a:active {
 
 ul, li {
   list-style-type: none;
+  margin-right: 3%;
 }
+
+.search-input-field {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+  text-align: center;

@@ -24,7 +24,7 @@ const TypeFilter = ({ filterProducts }) => {
     <div>
         TypeFilter
         <br /><br />
-        <input className='input-field' type='text' placeholder='Product Type' value={type} onChange={handleOnChangeType}/>
+        <input className='search-input-field' type='text' placeholder='Product Type' value={type} onChange={handleOnChangeType}/>
         <br /><br />
         <div>
             <span>

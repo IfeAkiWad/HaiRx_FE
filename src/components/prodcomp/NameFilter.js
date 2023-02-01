@@ -24,7 +24,7 @@ const NameFilter = ({ filterProducts }) => {
     <div>
         NameFilter
         <br /><br />
-        <input className='input-field' type='text' placeholder='Product Name' value={name} onChange={handleOnChangeName}/>
+        <input className='search-input-field' type='text' placeholder='Product Name' value={name} onChange={handleOnChangeName}/>
         <br /><br />
         <div>
             <span>

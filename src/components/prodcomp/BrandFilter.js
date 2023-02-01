@@ -23,17 +23,19 @@ const BrandFilter = ({ filterProducts }) => {
 
   return (
     <div>
-        BrandFilter
-        <br /><br />
-            <input className='input-field' type='text' placeholder='Brand Name' value={brand} onChange={handleOnChangeBrand}/>&nbsp;
+       <span><h2>Search Your Favorite Brand</h2></span>
+        <br />
+            <input className='search-input-field' type='text' placeholder='Brand Name' value={brand} onChange={handleOnChangeBrand}/>&nbsp;
         <br />
         <div>
-            
-            <ul>
-                {renderFilter.map((product, index) => {
-                    return <li key={index}><h4>{product.brand}</h4><p>{product.name}</p></li>
-                })}
-            </ul>
+        <br /><br />    
+            <span>
+                <ul>
+                    {renderFilter.map((product, index) => {
+                        return <li key={index}><h4>{product.brand}</h4><p>{product.name}</p></li>
+                    })}
+                </ul>
+            </span>
             
         </div>
     </div>
