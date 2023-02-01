@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 const BrandFilter = ({ filterProducts }) => {
     console.log('filteredProducts', filterProducts)
@@ -19,21 +20,23 @@ const BrandFilter = ({ filterProducts }) => {
     });
     
 
-    console.log('render filter', renderFilter)
+    console.log('render filter', renderFilter.length)
 
   return (
     <div>
-       <span><h2>Search Your Favorite Brand</h2></span>
+       <span><h2>Search Product Brand</h2></span>
         <br />
-            <input className='search-input-field' type='text' placeholder='Brand Name' value={brand} onChange={handleOnChangeBrand}/>&nbsp;
+            <input className='search-input-field' type='text' placeholder='Brand' value={brand} onChange={handleOnChangeBrand}/>&nbsp;
         <br />
-        <div>
+        <div className='search-result-container'>
         <br /><br />    
-            <span>
+            <span >
+                {renderFilter.length} result(s)
                 <ul>
                     {renderFilter.map((product, index) => {
-                        return <li key={index}><h4>{product.brand}</h4><p>{product.name}</p></li>
+                        return <li key={index}><Link id='product-link' to={`/products/${product?.id}=${product?.name}`}><h4>{product.brand}</h4><p>{product.name}</p></Link></li>
                     })}
+                    {/* <Link to={`/products/${products?.id}=${products?.name}`}>{products?.name}</Link> */}
                 </ul>
             </span>
             

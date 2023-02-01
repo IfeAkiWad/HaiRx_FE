@@ -186,7 +186,9 @@ a:active {
 }
 
 #product-link:hover {
-  background-color: lightsalmon; 
+  color: lightsalmon; 
+  text-shadow: black;
+  
 }
 
 /* #product-link {
@@ -212,15 +214,15 @@ a:active {
   background-size: cover;
 }
 
-@media screen and (max-width: 821px) {
+/* @media screen and (max-width: 821px) {
   #lede-img {   
     flex-direction: column;
-  }
-}
+  } */
+/* } */
 /* Products Display */
 
 #prod-container-div {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 #prod-filter-div {
@@ -240,12 +242,17 @@ a:active {
     padding: 5px 10px;
     border-radius: 4px;
     transition-duration: 0.4s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 ul, li {
   list-style-type: none;
-  margin-right: 3%;
+  /* margin-right: 3%; */
+  background-color: azure;
+  width: 450px;
+  height: 250px;
+  overflow:auto;
+  /* margin-left: 16%; */
 }
 
 .search-input-field {
@@ -255,4 +262,26 @@ ul, li {
   resize: vertical;
 }
 
-  text-align: center;
+#searchbg {
+  /* display: flex;
+  align-items: center;  
+  margin-top: 5%;
+  margin-left: 10%;
+  height: 600px;
+  max-width: 100%; */
+  background-image: url("/src/Hairx Product Images/searchbg.webp");
+  height: 15%;
+  width: 15%;
+  margin-left: 10%;
+  margin-top: -1%;
+  /* margin: auto; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:auto;
+
+}
+
+#searchbg:hover, li {
+cursor: pointer;
+}
+
