@@ -10,7 +10,7 @@ class ProductContainer extends Component {
          
         return (
                 <div id="prod-container-div">
-                    <h1 id='prod-container-h1'> What are you looking for?</h1>
+                    {/* <h1 id='prod-container-h1'> What are you looking for?</h1> */}
                     <ProductFilterContainer products={this.props.products} />
                 </div>
         )

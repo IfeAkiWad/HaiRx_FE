@@ -35,13 +35,13 @@ const Dashboard = ({ filterProducts }) => {
 
     return (
     <div className='prod-dashboard-container'>
-      {/* <button id='button' >Brand</button>&nbsp; */}
+      <button id='button' onClick={brandFilterModal}>Search</button>&nbsp;
       {/* <button id='button' onClick={nameFilterModal}>Product Name</button>&nbsp;
       <button id='button' onClick={typeFilterModal}>Product Type</button> */}
       <BrandFilterModal filterProducts={filterProducts} handleClose={hideBrandFilterModal} show={brand} />
-      <div id='searchbg'>
-          <img  onClick={brandFilterModal} src={searchbg} alt="img..." />
-       </div> 
+      {/* <div id='searchbg'>
+          <img   src={searchbg} alt="img..." />
+       </div>  */}
       {/* <NameFilterModal filterProducts={filterProducts} handleClose={hideNameFilterModal} show={name} />
       <TypeFilterModal filterProducts={filterProducts} handleClose={hideTypeFilterModal} show={type} /> */}
     </div>

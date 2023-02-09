@@ -9,7 +9,7 @@ const NavBar = () => {
                         <Link id="link" to="/">HaiRx</Link> 
                 </div> 
                 <div>
-                    <Link id="link" to="/products">Products</Link> 
+                    {/* <Link id="link" to="/products">Products</Link>  */}
                 </div>
             </nav>
         </div>

@@ -24,7 +24,7 @@ const BrandFilter = ({ filterProducts }) => {
 
   return (
     <div>
-       <span><h2>Search Product Brand</h2></span>
+
         <br />
             <input className='search-input-field' type='text' placeholder='Brand' value={brand} onChange={handleOnChangeBrand}/>&nbsp;
         <br />
