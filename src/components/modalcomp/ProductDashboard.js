@@ -35,7 +35,7 @@ const Dashboard = ({ filterProducts }) => {
 
     return (
     <div className='prod-dashboard-container'>
-      <button id='button' onClick={brandFilterModal}>Search</button>&nbsp;
+      <button id='dashboard-button' onClick={brandFilterModal}>Search Products</button>&nbsp;
       {/* <button id='button' onClick={nameFilterModal}>Product Name</button>&nbsp;
       <button id='button' onClick={typeFilterModal}>Product Type</button> */}
       <BrandFilterModal filterProducts={filterProducts} handleClose={hideBrandFilterModal} show={brand} />

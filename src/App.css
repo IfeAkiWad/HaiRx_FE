@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: azure
+  background-color: white
 }
 
 /* navigation */
@@ -20,7 +20,7 @@ nav {
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   /* font-size: 20px; */
-  background-color: azure;
+  background-color: white;
 }
 
 nav a {
@@ -46,11 +46,13 @@ nav a:hover {
   max-width: 100%;
   align-items: center;
   align-content: center;
+  margin-top:5%;
+  color: #543855;
 }
 
 #home {
-  margin-top:10%;
-  color: #543855;
+  flex-shrink: 3;
+  
 }
 
 #logo {
@@ -112,6 +114,28 @@ button:hover {
     cursor: pointer;
 }
 
+#dashboard-button {
+  background-color: #735273 ;
+    color: white;
+    font-size: 27px;
+    padding: 15px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 .input-field {
   padding: 12px;
   border: 1px solid #ccc;
@@ -119,15 +143,21 @@ button:hover {
   resize: vertical;
 }
 
+/* #dashboard-button {
+  box
+} */
+
 input {
   background-color: azure;
 }
 
 #img{
 display:flex ;
+  
 }
 
 .background-img {
+  flex-shrink: 3;
   /* margin-left: 7%;  
   margin-top: 5%;  */
   margin:auto;
@@ -155,7 +185,7 @@ display:flex ;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black;
+  color: white;
   /* opacity: 0.8; */
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   background-color: #735273;
@@ -163,6 +193,24 @@ display:flex ;
   border-radius: 1%;
   border-style: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+}
+
+#user-landing-text2{
+  text-align: center;
+  text-shadow: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  /* opacity: 0.8; */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #735273;
+  /* border: 0.5px solid black; */
+  border-radius: 1%;
+  border-style: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 11%;  
 }
 
 a {
@@ -221,6 +269,7 @@ a:active {
 /* } */
 /* Products Display */
 
+
 #prod-container-div {
   margin-top: -15%;
 }
@@ -262,26 +311,18 @@ ul, li {
   resize: vertical;
 }
 
-#searchbg {
-  /* display: flex;
-  align-items: center;  
-  margin-top: 5%;
-  margin-left: 10%;
-  height: 600px;
-  max-width: 100%; */
-  background-image: url("/src/Hairx Product Images/searchbg.webp");
-  height: 15%;
-  width: 15%;
-  margin-left: 10%;
-  margin-top: -1%;
-  /* margin: auto; */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:auto;
-
+/* image merri-go-round */
+.merri-go-container {
+  display: flex;
+  flex-shrink: 3;
+  justify-content: space-evenly;
+  margin-top: 2%;
 }
 
-#searchbg:hover, li {
-cursor: pointer;
+.merri-go-img {
+  order: 4;
+  flex-shrink: 1;
+  flex-direction: row;
+  width: 20%;
+  height: 20%;
 }
-
