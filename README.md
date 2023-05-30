@@ -1,3 +1,3 @@
-# Getting Started HaiRx
+# HaiRx
 
 README pending
