@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Getting Started HaiRx
 
 README pending
