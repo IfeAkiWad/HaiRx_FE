@@ -8,6 +8,7 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 
 import NavBar from './components/navcomp/NavBar';
 import ProductContainer from './containers/ProductContainer';
+import ProductProfile from './components/prodcomp/ProductProfile';
 // import ProductFilterContainer from './containers/ProductFilterContainer';
 import Home from './components/Home';
 import UserLanding from './components/usercomp/UserLanding';
@@ -34,6 +35,7 @@ class App extends Component {
             <Route exact path="/products" element={<ProductContainer />}/>
             <Route exact path="/" element={<Home />}/>
             <Route exact path="/your-hairx" element={<UserLanding />}/>
+            <Route exact path="/products/:id=:name" element={<ProductProfile />}/>
           </Routes>
         </Router>
       </div>

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
-const BrandFilter = ({ filterProducts }) => {
+const BrandFilter = ({ filterProducts, handleProductClick }) => {
     console.log('filteredProducts', filterProducts)
 
     const [brand, setBrand] = useState('')
@@ -10,6 +10,10 @@ const BrandFilter = ({ filterProducts }) => {
         setBrand(event.target.value)
     }
 
+    // const handleProductClick = (product) => {
+    //     // Update the selected product in the parent component's state or using a state management solution
+    // };
+    
     // eslint-disable-next-line array-callback-return
     let renderFilter = filterProducts.filter(product => {
         if(brand !== '') {
@@ -34,7 +38,18 @@ const BrandFilter = ({ filterProducts }) => {
                 {renderFilter.length} result(s)
                 <ul>
                     {renderFilter.map((product, index) => {
-                        return <li key={index}><Link id='product-link' to={`/products/${product?.id}=${product?.name}`}><h4>{product.brand}</h4><p>{product.name}</p></Link></li>
+                        const productLink = `/products/${product?.id}=${product?.name}`;
+                        return <li key={index}>
+                            <Link 
+                            id='product-link' 
+                            to={productLink} 
+                            onClick={(event) => handleProductClick(event, product.id)} 
+                            data-product-id={product.id}
+                            >
+                                <h4>{product.brand}</h4>
+                                <p>{product.name}</p>
+                            </Link>
+                        </li>
                     })}
                     {/* <Link to={`/products/${products?.id}=${products?.name}`}>{products?.name}</Link> */}
                 </ul>

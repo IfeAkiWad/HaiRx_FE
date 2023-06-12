@@ -1,8 +1,19 @@
 import React from 'react'
+// import Footer from '../../Footer'
 
-const ProductProfile = () => {
+const ProductProfile = ({ selectedProduct }) => {
+  if (!selectedProduct) {
+    return <div>No product selected.</div>;
+  }
+
+  console.log(selectedProduct)
   return (
-    <div></div>
+    <div>
+      <div className='footer'>
+        {/* {selectedProduct} */}
+            {/* <Footer /> */}
+          </div>
+    </div>
   )
 }
 
