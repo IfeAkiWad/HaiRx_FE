@@ -9,7 +9,6 @@ import { fetchSubscriptions } from './actions/subscriptionActions'
 import NavBar from './components/navcomp/NavBar';
 import ProductContainer from './containers/ProductContainer';
 import ProductProfile from './components/prodcomp/ProductProfile';
-// import ProductFilterContainer from './containers/ProductFilterContainer';
 import Home from './components/Home';
 import UserLanding from './components/usercomp/UserLanding';
 
@@ -28,7 +27,6 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        {/* <ProductContainer /> */}
         <Router>
           <NavBar />
           <Routes>

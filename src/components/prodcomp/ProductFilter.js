@@ -1,13 +1,13 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
-const BrandFilter = ({ filterProducts, handleProductClick }) => {
+const ProductFilter = ({ filterProducts, handleProductClick }) => {
     console.log('filteredProducts', filterProducts)
 
-    const [brand, setBrand] = useState('')
+    const [prod, setProduct] = useState('')
 
-    const handleOnChangeBrand = (event) => {
-        setBrand(event.target.value)
+    const handleOnChangeProduct = (event) => {
+        setProduct(event.target.value)
     }
 
     // const handleProductClick = (product) => {
@@ -16,9 +16,9 @@ const BrandFilter = ({ filterProducts, handleProductClick }) => {
     
     // eslint-disable-next-line array-callback-return
     let renderFilter = filterProducts.filter(product => {
-        if(brand !== '') {
+        if(prod !== '') {
             return Object.values(product).some(val =>
-                typeof val === "string" && val.toLowerCase().includes(brand.toLowerCase())
+                typeof val === "string" && val.toLowerCase().includes(prod.toLowerCase())
             );
         }
     });
@@ -30,7 +30,7 @@ const BrandFilter = ({ filterProducts, handleProductClick }) => {
     <div>
 
         <br />
-            <input className='search-input-field' type='text' placeholder='Brand' value={brand} onChange={handleOnChangeBrand}/>&nbsp;
+            <input className='search-input-field' type='text' placeholder='search..' value={prod} onChange={handleOnChangeProduct}/>&nbsp;
         <br />
         <div className='search-result-container'>
         <br /><br />    
@@ -46,7 +46,7 @@ const BrandFilter = ({ filterProducts, handleProductClick }) => {
                             onClick={(event) => handleProductClick(event, product.id)} 
                             data-product-id={product.id}
                             >
-                                <h4>{product.brand}</h4>
+                                <h4>{product.Product}</h4>
                                 <p>{product.name}</p>
                             </Link>
                         </li>
@@ -60,4 +60,4 @@ const BrandFilter = ({ filterProducts, handleProductClick }) => {
   )
 }
 
-export default BrandFilter
+export default ProductFilter

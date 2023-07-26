@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 // import { Link } from 'react-router-dom';
-import BrandFilterModal from '../modalcomp/BrandFilterModal'
+import ProductFilterModal from './ProductFilterModal'
 import ProductProfile from '../prodcomp/ProductProfile'
 
 const Dashboard = ({ filterProducts }) => {
-    const [brand, setBrand] = useState(false)
+    const [prod, setProduct] = useState(false)
     const [selectedProduct, setSelectedProduct] = useState(null);
     
-    const brandFilterModal = (e) => {
-        setBrand(true)
+    const productFilterModal = (e) => {
+        setProduct(true)
     } 
 
-    const hideBrandFilterModal = (e) => {
-        setBrand(false)
+    const hideProductFilterModal = (e) => {
+        setProduct(false)
     } 
     
     const handleProductClick = (event,productId) => {
@@ -22,11 +22,11 @@ const Dashboard = ({ filterProducts }) => {
     };
     return (
     <div className='prod-dashboard-container'>
-      <button id='dashboard-button' onClick={brandFilterModal}>Search Products</button>&nbsp;
-      <BrandFilterModal 
+      <button id='dashboard-button' onClick={productFilterModal}>Search Products</button>&nbsp;
+      <ProductFilterModal 
       filterProducts={filterProducts} 
-      handleClose={hideBrandFilterModal} 
-      show={brand} 
+      handleClose={hideProductFilterModal} 
+      show={prod} 
       handleProductClick={handleProductClick} 
       selectedProduct={selectedProduct}
       />
