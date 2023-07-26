@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ProductFilterContainer from '../containers/ProductFilterContainer'
+import ProductFilterContainer from './ProductFilterContainer'
 
 
 class ProductContainer extends Component {
