@@ -2,9 +2,9 @@ import React from 'react'
 // import Footer from '../../Footer'
 
 const ProductProfile = ({ selectedProduct }) => {
-  if (!selectedProduct) {
-    return <div>No product selected.</div>;
-  }
+  // if (!selectedProduct) {
+  //   return <div>No product selected.</div>;
+  // }
 
   console.log(selectedProduct)
   return (

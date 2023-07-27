@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
+// ProductFilter handles the filtering of the products once the search has begun. It will render the resutls as links that - once clicked, will trigger the appearance of the product profile button (in the product Filter Modal) that will redirect to the product profile after click.
 const ProductFilter = ({ filterProducts, handleProductClick }) => {
     console.log('filteredProducts', filterProducts)
 
@@ -38,15 +39,15 @@ const ProductFilter = ({ filterProducts, handleProductClick }) => {
                 {renderFilter.length} result(s)
                 <ul>
                     {renderFilter.map((product, index) => {
-                        const productLink = `/products/${product?.id}=${product?.name}`;
+                        // const productLink = `/products/${product?.id}=${product?.name}`;
                         return <li key={index}>
                             <Link 
                             id='product-link' 
-                            to={productLink} 
+                            // to={productLink} 
                             onClick={(event) => handleProductClick(event, product.id)} 
                             data-product-id={product.id}
                             >
-                                <h4>{product.Product}</h4>
+                                <h4>{product.brand}</h4>
                                 <p>{product.name}</p>
                             </Link>
                         </li>

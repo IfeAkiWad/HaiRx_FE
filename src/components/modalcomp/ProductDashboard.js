@@ -4,6 +4,7 @@ import ProductFilterModal from './ProductFilterModal'
 import ProductProfile from '../prodcomp/ProductProfile'
 
 const Dashboard = ({ filterProducts }) => {
+  // Product Dashboard handles the new window feature when 'search product' button is clicked
     const [prod, setProduct] = useState(false)
     const [selectedProduct, setSelectedProduct] = useState(null);
     
@@ -15,12 +16,12 @@ const Dashboard = ({ filterProducts }) => {
         setProduct(false)
     } 
     
-    const handleProductClick = (event,productId) => {
-      // const productId = event.target.dataset.productId;
+    const handleProductClick = (event,product) => {
       event.preventDefault()
-      setSelectedProduct(productId);
+      setSelectedProduct(product);
     };
     return (
+      // once new search window appears after clicking 'search Products', ProductFilterModal renders
     <div className='prod-dashboard-container'>
       <button id='dashboard-button' onClick={productFilterModal}>Search Products</button>&nbsp;
       <ProductFilterModal 

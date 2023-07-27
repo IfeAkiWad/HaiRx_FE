@@ -33,7 +33,7 @@ class App extends Component {
             <Route exact path="/products" element={<ProductContainer />}/>
             <Route exact path="/" element={<Home />}/>
             <Route exact path="/your-hairx" element={<UserLanding />}/>
-            <Route exact path="/products/:id=:name" element={<ProductProfile />}/>
+            <Route exact path="/products/:id" element={<ProductProfile />}/>
           </Routes>
         </Router>
       </div>
