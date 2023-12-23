@@ -6,6 +6,7 @@ import ProductFilterContainer from './ProductFilterContainer'
 class ProductContainer extends Component {
 //    Product Container retrieving product objects from global state storage 
     render () { 
+        console.log('product container', this.props.products)
         return (
                 <div id="prod-container-div">
                     {/* sending retrieved state into ProductFilterContainer as props to begin the product filter upon user-search-input process */}

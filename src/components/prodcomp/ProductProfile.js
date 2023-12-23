@@ -1,20 +1,26 @@
 import React from 'react'
-// import Footer from '../../Footer'
 
-const ProductProfile = ({ selectedProduct }) => {
-  // if (!selectedProduct) {
-  //   return <div>No product selected.</div>;
-  // }
+const ProductProfile = ({ selectedProduct, userInput, products }) => {
 
-  console.log(selectedProduct)
-  return (
-    <div>
-      <div className='footer'>
-        {/* {selectedProduct} */}
-            {/* <Footer /> */}
-          </div>
-    </div>
-  )
+const product = products.find((p) => p?.id === selectedProduct)
+
+
+  if (userInput !== '') { 
+    return (
+        <div className='product-profile'>
+          {product ? (
+            <div>
+              <h3>Product Selected:</h3>
+              <h4>Brand: {product.brand}</h4>
+              <p>Name: {product.name}</p>
+            </div>
+            
+          ) : (
+            <div>No product selected.</div>
+          )}
+        </div>
+      ) 
+  } 
 }
 
 export default ProductProfile

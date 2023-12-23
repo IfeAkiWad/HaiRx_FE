@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SignInModal from './SignInModal';
-import SignUpModal from './SignUpModal';
+import SignUpModal from './SignUpModal'
 
 const Dashboard = () => {
     const [signIn, setSignIn] = useState(false)

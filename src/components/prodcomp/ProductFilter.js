@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import ProductProfile from './ProductProfile'
 
 // ProductFilter handles the filtering of the products once the search has begun. It will render the resutls as links that - once clicked, will trigger the appearance of the product profile button (in the product Filter Modal) that will redirect to the product profile after click.
-const ProductFilter = ({ filterProducts, handleProductClick }) => {
+const ProductFilter = ({ filterProducts, handleProductClick, selectedProduct }) => {
     console.log('filteredProducts', filterProducts)
 
     const [prod, setProduct] = useState('')
@@ -10,22 +11,19 @@ const ProductFilter = ({ filterProducts, handleProductClick }) => {
     const handleOnChangeProduct = (event) => {
         setProduct(event.target.value)
     }
-
-    // const handleProductClick = (product) => {
-    //     // Update the selected product in the parent component's state or using a state management solution
-    // };
     
     // eslint-disable-next-line array-callback-return
-    let renderFilter = filterProducts.filter(product => {
+    let renderFilter = filterProducts.filter(p => {
         if(prod !== '') {
-            return Object.values(product).some(val =>
+            return Object.values(p).some(val =>
                 typeof val === "string" && val.toLowerCase().includes(prod.toLowerCase())
             );
         }
     });
     
-
     console.log('render filter', renderFilter.length)
+
+    const productProfileElement = <ProductProfile selectedProduct={selectedProduct} userInput={prod} products={filterProducts} />
 
   return (
     <div>
@@ -35,15 +33,14 @@ const ProductFilter = ({ filterProducts, handleProductClick }) => {
         <br />
         <div className='search-result-container'>
         <br /><br />    
-            <span >
-                {renderFilter.length} result(s)
+            <span>
+                
                 <ul>
+                {renderFilter.length} result(s)
                     {renderFilter.map((product, index) => {
-                        // const productLink = `/products/${product?.id}=${product?.name}`;
                         return <li key={index}>
                             <Link 
                             id='product-link' 
-                            // to={productLink} 
                             onClick={(event) => handleProductClick(event, product.id)} 
                             data-product-id={product.id}
                             >
@@ -52,11 +49,11 @@ const ProductFilter = ({ filterProducts, handleProductClick }) => {
                             </Link>
                         </li>
                     })}
-                    {/* <Link to={`/products/${products?.id}=${products?.name}`}>{products?.name}</Link> */}
                 </ul>
             </span>
             
         </div>
+        {productProfileElement}
     </div>
   )
 }

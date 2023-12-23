@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 body {
@@ -203,6 +204,10 @@ display:flex ;
 #prodfilter-container-h2, #prod-container-h1 {
   color: #543855;
 }
+
+/* #product-profile {
+  left: 10%;
+} */
 
 /* product filters */
 
