@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { submitUsers } from '../../actions/userActions'
+import { useHistory } from 'react-router-dom';
+
 
 class SignUp extends Component {
 
@@ -19,11 +21,17 @@ class SignUp extends Component {
     }
 
     handleSubmit = (event) => {
+        const history = useHistory()
+
         console.log('form submit')
         event.preventDefault();
-        this.props.submitUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
+        // this.props.submitUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
         // alert("Successfully signed in");
         // window.location.assign("https://localhost:3001/your-hairx")
+        const { email, password } = this.state;
+        this.props.submitUsers({ user: { email, password } });
+        history.push('/your-hairx')
+
     }
 
     render () {
