@@ -13,7 +13,7 @@ export const fetchUsers = () => {
       })
     }
 }
-  
+
 export const submitUsers = (user) => {
     return (dispatch) => {
       fetch('http://localhost:3000/api/v1/users', {
@@ -34,7 +34,7 @@ export const submitUsers = (user) => {
             localStorage.setItem('user', user.jwt);
             console.log(user, "submitting user")
             dispatch({ type: 'ADD_USERS', payload: user })
-            window.location.href="your-hairx"
+            // window.location.href="your-hairx"
           }  
       })
       .catch((err) => {
@@ -49,8 +49,8 @@ export const loginUsers = (user) => {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json"
-        // Authorization: `Bearer ${localStorage.getItem('user')}`
+        // "Accept": "application/json"
+        Authorization: `Bearer ${localStorage.getItem('user')}`
         },  
         body: JSON.stringify(user)
     })
@@ -63,7 +63,7 @@ export const loginUsers = (user) => {
           localStorage.setItem('user', user.jwt);
           console.log(user, "submitting user")
           dispatch({ type: 'ADD_USERS', payload: user })
-          window.location.href="your-hairx"
+          // window.location.href="your-hairx"
         }
        
         console.log(user);
