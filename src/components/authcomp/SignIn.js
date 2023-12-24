@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { loginUsers } from "../../actions/userActions"
+import { useHistory } from 'react-router-dom';
+
 
 class SignIn extends Component {
 
@@ -18,12 +20,18 @@ class SignIn extends Component {
         this.setState({[event.target.name]: event.target.value})
     }
 
+
     handleSubmit = (event) => {
+        const history = useHistory()
+        
         console.log('form submit')
         event.preventDefault();
-        this.props.loginUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
+        // this.props.loginUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
         // alert("Successfully signed in");
         // window.location.assign("https://localhost:3001/your-hairx")
+        const { email, password } = this.state;
+        this.props.loginUsers({ user: { email, password } });
+        history.push('/your-hairx')
     }
 
     render () {
