@@ -1,4 +1,9 @@
-const userReducer = (state = {users: [], loading: false }, action) => {
+const initialState = {
+    isLoggedIn: false, // Indicates if the user is logged in
+    // other user-related state properties...
+  };
+
+const userReducer = (state = { users: [], loading: false, ...initialState }, action) => {
     switch (action.type) {
         case 'LOADING_USERS':
             return {
@@ -12,6 +17,14 @@ const userReducer = (state = {users: [], loading: false }, action) => {
                 ...state,
                 users: action.payload,
                 loading: false
+            }
+            case 'LOGOUT_USER':
+            console.log('LOGGING OUT USER')
+            return {
+                ...state,
+                isLoggedIn: false
+                // users: action.payload,
+                // loading: false
             }    
         default:
           return state;  

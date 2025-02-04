@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { submitUsers } from '../../actions/userActions'
+// import { useNavigate } from 'react-router-dom'
 
 class SignUp extends Component {
 
@@ -19,11 +20,16 @@ class SignUp extends Component {
     }
 
     handleSubmit = (event) => {
+        // const navigate = useNavigate()
+
         console.log('form submit')
         event.preventDefault();
-        this.props.submitUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
+        // this.props.submitUsers(this.state); //using action dispatch function as a prop (mapDispatchToProps)
         // alert("Successfully signed in");
         // window.location.assign("https://localhost:3001/your-hairx")
+        const { email, password } = this.state;
+        this.props.submitUsers({ user: { email, password } });
+        // navigate('your-hairx')
     }
 
     render () {

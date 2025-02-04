@@ -49,8 +49,8 @@ export const loginUsers = (user) => {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json"
-        // Authorization: `Bearer ${localStorage.getItem('user')}`
+        // "Accept": "application/json"
+        Authorization: `Bearer ${localStorage.getItem('user')}`
         },  
         body: JSON.stringify(user)
     })
@@ -74,3 +74,14 @@ export const loginUsers = (user) => {
   } 
 } 
 
+
+export const logoutUser = () => {
+  return (dispatch) => {
+    // Remove token from local storage
+    localStorage.removeItem('jwt');
+    console.log("logging out user")
+    // Dispatch an action to reset user state or perform any necessary cleanup
+    dispatch({type: 'LOGOUT_USER'});
+    window.location.href="your-hairx"
+  };
+};

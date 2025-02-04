@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-// import { Link } from 'react-router-dom';
 import ProductFilterModal from './ProductFilterModal'
-import ProductProfile from '../prodcomp/ProductProfile'
 
 const Dashboard = ({ filterProducts }) => {
   // Product Dashboard handles the new window feature when 'search product' button is clicked
@@ -16,7 +14,7 @@ const Dashboard = ({ filterProducts }) => {
         setProduct(false)
     } 
     
-    const handleProductClick = (event,product) => {
+    const handleProductClick = (event, product) => {
       event.preventDefault()
       setSelectedProduct(product);
     };
@@ -31,12 +29,6 @@ const Dashboard = ({ filterProducts }) => {
       handleProductClick={handleProductClick} 
       selectedProduct={selectedProduct}
       />
-      {/* <ProductProfile selectedProduct={selectedProduct}/>
-      {selectedProduct && (
-        <Link to={`/products/${selectedProduct}`} className="profile-link">
-          View Product Profile
-        </Link>
-      )} */}
     </div>
   )
 }
